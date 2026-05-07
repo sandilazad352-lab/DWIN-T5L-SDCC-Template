@@ -22,7 +22,8 @@ endif
 
 # Include directory path
 INCLUDES = 	-Isrc -Isrc/app -Isrc/app/app_defs -Iinclude -Istartup -Ilib/uart -Ilib/sys \
-			-Ilib/crc16 -Ilib/timer -Ilib/rtc -Isrc/app/functions
+			-Ilib/crc16 -Ilib/timer -Ilib/rtc -Isrc/app/functions \
+			-Ilib/led -Ilib/button -Ilib/rfid -Ilib/wifi
 
 # Common flags for SDCC
 CFLAGS  = -mmcs51 --model-large --xram-loc 0x8000 --xram-size 0x8000 $(INCLUDES)
@@ -39,11 +40,17 @@ SRCS = \
 	lib/crc16/crc16.c \
 	lib/timer/timer.c \
 	lib/rtc/rtc.c \
+	lib/gpio_utils.c \
+	lib/led/led.c \
+	lib/button/button.c \
+	lib/rfid/rfid.c \
+	lib/wifi/wifi.c
 
 
 ASMS = startup/startup_T5L.s
 RELS     = 	$(OBJDIR)/main.rel $(OBJDIR)/startup_T5L.rel $(OBJDIR)/uart.rel $(OBJDIR)/sys.rel \
 			$(OBJDIR)/crc16.rel $(OBJDIR)/timer.rel $(OBJDIR)/rtc.rel $(OBJDIR)/app_defs.rel \
+			$(OBJDIR)/gpio_utils.rel $(OBJDIR)/led.rel $(OBJDIR)/button.rel $(OBJDIR)/rfid.rel $(OBJDIR)/wifi.rel
 
 
 # Link-time relative object list from inside build/dist
@@ -87,6 +94,28 @@ $(OBJDIR)/rtc.rel: lib/rtc/rtc.c
 
 # app/app_defs/app_defs.c
 $(OBJDIR)/app_defs.rel: src/app/app_defs/app_defs.c
+	@mkdir -p $(OBJDIR)
+	$(SDCC) $(CFLAGS) -c $< -o $@
+
+# Common GPIO utilities
+$(OBJDIR)/gpio_utils.rel: lib/gpio_utils.c
+	@mkdir -p $(OBJDIR)
+	$(SDCC) $(CFLAGS) -c $< -o $@
+
+# Custom hardware drivers
+$(OBJDIR)/led.rel: lib/led/led.c
+	@mkdir -p $(OBJDIR)
+	$(SDCC) $(CFLAGS) -c $< -o $@
+
+$(OBJDIR)/button.rel: lib/button/button.c
+	@mkdir -p $(OBJDIR)
+	$(SDCC) $(CFLAGS) -c $< -o $@
+
+$(OBJDIR)/rfid.rel: lib/rfid/rfid.c
+	@mkdir -p $(OBJDIR)
+	$(SDCC) $(CFLAGS) -c $< -o $@
+
+$(OBJDIR)/wifi.rel: lib/wifi/wifi.c
 	@mkdir -p $(OBJDIR)
 	$(SDCC) $(CFLAGS) -c $< -o $@
 
