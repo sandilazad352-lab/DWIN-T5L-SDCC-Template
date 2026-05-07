@@ -14,10 +14,29 @@
 #include "sys.h"
 #include "timer.h"
 #include "rtc.h"
+#include "led.h"
 #include "vp_flags.h"
 #include "uart_flags.h"
 #include "app_defs.h"
 #include "app.c"
+
+/* LED Blinking variables */
+static u16 blink_counter = 0;
+static const u16 BLINK_INTERVAL = 500; /* 500ms on/off */
+
+/**
+ * Blink LED - toggles LED state every BLINK_INTERVAL milliseconds
+ * Uses P1.0 as LED pin (adjust port/pin as needed for your hardware)
+ */
+void Blink_LED(void)
+{
+    blink_counter++;
+    if (blink_counter >= BLINK_INTERVAL)
+    {
+        blink_counter = 0;
+        LED_TOGGLE(1, 0); /* Toggle LED on port P1, pin 0 */
+    }
+}
 
 void main(void)
 {
@@ -25,9 +44,15 @@ void main(void)
     Uart_Init();
     RTC_Service();
     App_Init();
+    
+    /* Initialize LED pin as output */
+    LED_OFF(1, 0); /* Set P1.0 to LOW initially */
 
     while (1)
     {
+        /* Blink LED */
+        Blink_LED();
+        
         /* Monitor DGUS register and send updates */
         DGUS_MonitorAndSendUpdates();
 
